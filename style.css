@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 500ms;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 3.2rem;
+  background-color: hsl(222, 26%, 31%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 40rem;
+  padding: 0.2rem;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  gap: 2rem;
+}
+
+.title {
+  color: #fff;
+  font-size: 2.4rem;
+}
+
+.theme--title {
+  color: #fff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8;
+  justify-self: end;
+}
+
+/* CHECK AGAIN */
+.toggle {
+  position: relative;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 1000px;
+  color: transparent;
+  height: 100%;
+  cursor: pointer;
+  transition: all 500ms;
+}
+.slider--btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 60%;
+  margin: 0.5rem;
+  border-radius: inherit;
+  background-color: hsl(6, 63%, 50%);
+}
+/* active class */
+.active {
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(60, 10%, 19%);
+}
+
+/* ////////////////////////////////// */
+/* THEME 2 CLASSES */
+.active .title,
+.active .theme--title {
+  color: hsl(60, 10%, 19%);
+}
+
+.active .toggle {
+  background-color: hsl(0, 5%, 81%);
+}
+.active .slider--btn {
+  background-color: hsl(25, 98%, 40%);
+  left: 50%;
+}
+.active .display-area {
+  background-color: hsl(0, 0%, 93%);
+}
+.active .total--number {
+  color: hsl(60, 10%, 19%);
+}
+.active .button--grid {
+  background-color: hsl(0, 5%, 81%);
+}
+
+.active .button {
+  background-color: hsl(45, 7%, 89%);
+  box-shadow: 0 2px 0 0 hsl(35, 11%, 61%);
+}
+.active .button:hover,
+.active .button:active {
+  background-color: hsl(45, 7%, 84%);
+}
+.active .button--del,
+.active .button--reset {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0 2px 0 0 hsl(185, 58%, 25%);
+}
+
+.active .button--del:hover,
+.active .button--reset:hover,
+.active .button--del:active,
+.active .button--reset:active {
+  background-color: hsl(185, 42%, 50%);
+}
+
+.active .button--equal {
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: 0 2px 0 0 hsl(25, 99%, 27%);
+}
+/* 
+///////////////////////////////////// */
+.display-area {
+  width: 100%;
+  padding: 2.4rem;
+  background-color: hsl(224, 36%, 15%);
+  border-radius: 8px;
+  margin-bottom: 2.4rem;
+  overflow-x: hidden;
+}
+
+.total--number {
+  text-align: right;
+  font-size: 4.8rem;
+  color: #fff;
+}
+
+.button--grid {
+  background-color: hsl(223, 31%, 20%);
+  width: 100%;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2.4rem;
+  gap: 1.6rem;
+}
+
+.button,
+.func--btn {
+  cursor: pointer;
+  border: none;
+  font-family: "League Spartan", sans-serif;
+  background-color: hsl(30, 25%, 89%);
+  color: hsl(221, 14%, 31%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  padding: 1.2rem 0 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 0 0 hsl(28, 16%, 65%);
+  transition: all 500ms;
+}
+
+.button:hover,
+.button:active {
+  background-color: #fff;
+}
+
+.button--del,
+.button--reset {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0 2px 0 0 hsl(224, 28%, 35%);
+}
+
+.button--del:hover,
+.button--reset:hover,
+.button--del:active,
+.button--reset:active {
+  background-color: hsl(225, 21%, 60%);
+}
+
+.button--reset {
+  grid-column: 1 /3;
+}
+
+.button--equal {
+  background-color: hsl(6, 63%, 50%);
+  color: #fff;
+  grid-column: 3/5;
+  box-shadow: 0 2px 0 0 hsl(6, 70%, 34%);
+}
+
+.button--equal:hover,
+.button--equal:active {
+  background-color: hsl(6, 63%, 60%);
+}
